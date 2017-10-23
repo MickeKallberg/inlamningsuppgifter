@@ -35,7 +35,7 @@ public class Login {
                     	LocalDate senastBetalat = LocalDate.parse(ln2);                 // Parsar datumet som är inscannat i ln2 till variabel senastBetalt.
             		
             		if(senastBetalat.isAfter(oneYearAgo)) {                         // Om det var mindre än ett år sen besökaren betalade utförs denna sats.
-                            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("Senasttranat.txt"))); // Skapar objektet out av typen printwriter inhållandes direktioner för hur datan ska strömma till textfilen.
+                            PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter("Senasttranat.txt", true))); // Skapar objektet out av typen printwriter inhållandes direktioner för hur datan ska strömma till textfilen.
             		    out.println(medlemsLista[0] + "," + medlemsLista[1]);       // Skriver innehållet i element ett och två till Senasttranat.txt
             		    out.println(dagensDatum);                                   // Skriver dagens datum på nästa rad i Senasttranat.txt
                             out.close();                                                // Stänger textfilen vi skrivit till.
